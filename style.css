@@ -1,0 +1,220 @@
+/* -------------------------------
+   RESET & CƠ BẢN
+---------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f5f7fc 0%, #eef2f9 100%);
+    color: #1e293b;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+.app-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* -------------------------------
+   HEADER & GREETING
+---------------------------------- */
+.dashboard-header {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.dashboard-header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    background: linear-gradient(120deg, #3b82f6, #8b5cf6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: -0.5px;
+}
+
+.dashboard-header h1 i {
+    background: none;
+    -webkit-background-clip: unset;
+    color: #3b82f6;
+    margin-right: 12px;
+}
+
+.greeting-box {
+    background: white;
+    padding: 0.6rem 1.3rem;
+    border-radius: 60px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    border: 1px solid rgba(59,130,246,0.2);
+    backdrop-filter: blur(2px);
+    transition: all 0.2s;
+}
+
+.greeting-box i {
+    margin-right: 8px;
+    color: #f59e0b;
+}
+
+.subhead {
+    color: #475569;
+    font-size: 1rem;
+    border-top: 1px solid #e2e8f0;
+    display: inline-block;
+    padding-top: 0.75rem;
+}
+
+/* -------------------------------
+   GRID CARDS (HIỆN ĐẠI)
+---------------------------------- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    flex: 1;
+    margin-bottom: 3rem;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(2px);
+    border-radius: 28px;
+    padding: 1.8rem;
+    box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.08);
+    transition: all 0.35s cubic-bezier(0.2, 0, 0, 1);
+    border: 1px solid rgba(255,255,255,0.5);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Hiệu ứng hover mượt mà */
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.2);
+    background: white;
+    border-color: #cbd5e1;
+}
+
+.card-icon {
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+}
+
+.project-card h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.3px;
+}
+
+.project-card p {
+    color: #334155;
+    margin-bottom: 1.3rem;
+    font-size: 0.95rem;
+    line-height: 1.45;
+    flex-grow: 1;
+}
+
+.card-meta {
+    display: flex;
+    gap: 0.6rem;
+    margin-bottom: 1.6rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background: #eef2ff;
+    padding: 0.25rem 0.8rem;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #2563eb;
+    letter-spacing: 0.3px;
+}
+
+.card-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    background: #1e293b;
+    color: white;
+    text-decoration: none;
+    padding: 0.7rem 1.3rem;
+    border-radius: 40px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.25s;
+    margin-top: auto;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.card-btn i {
+    transition: transform 0.2s;
+}
+
+.card-btn:hover {
+    background: #0f172a;
+    transform: scale(1.02);
+}
+
+.card-btn:hover i {
+    transform: translateX(4px);
+}
+
+/* card color accents */
+.project-card:nth-child(1) .card-icon { color: #3b82f6; }
+.project-card:nth-child(2) .card-icon { color: #ec489a; }
+.project-card:nth-child(3) .card-icon { color: #8b5cf6; }
+.project-card:nth-child(4) .card-icon { color: #10b981; }
+
+/* -------------------------------
+   FOOTER
+---------------------------------- */
+.dashboard-footer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #5b6e8c;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 1.8rem;
+    margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 680px) {
+    .app-container {
+        padding: 1.2rem;
+    }
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .dashboard-header h1 {
+        font-size: 1.8rem;
+    }
+    .projects-grid {
+        gap: 1.3rem;
+    }
+}

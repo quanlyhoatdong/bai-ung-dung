@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Dashboard | Tổng hợp dự án</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts hiện đại -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (free icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header với chào động -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <h1><i class="fas fa-cubes"></i> Trung tâm dự án</h1>
+                <div class="greeting-box" id="greetingMessage">
+                    <i class="fas fa-smile-wink"></i>
+                    <span>Đang tải...</span>
+                </div>
+            </div>
+            <p class="subhead">Quản lý & khám phá 4 ứng dụng mẫu</p>
+        </header>
+
+        <!-- Grid Cards -->
+        <main class="projects-grid">
+            <!-- Project 1: Kanban -->
+            <div class="project-card">
+                <div class="card-icon">
+                    <i class="fas fa-tasks"></i>
+                </div>
+                <h2>Kanban Board</h2>
+                <p>Quản lý công việc theo phong cách Lean. Kéo thả thẻ, cập nhật trạng thái trực quan.</p>
+                <div class="card-meta">
+                    <span class="badge">React-like</span>
+                    <span class="badge">Drag & Drop</span>
+                </div>
+                <a href="project-1-kanban/index.html" class="card-btn">
+                    Truy cập dự án <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Project 2: Quiz -->
+            <div class="project-card">
+                <div class="card-icon">
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                <h2>Quiz App</h2>
+                <p>Kiểm tra kiến thức với câu hỏi trắc nghiệm, tính điểm và phản hồi tức thì.</p>
+                <div class="card-meta">
+                    <span class="badge">JavaScript</span>
+                    <span class="badge">Đếm điểm</span>
+                </div>
+                <a href="project-2-quiz/index.html" class="card-btn">
+                    Truy cập dự án <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Project 3: Theme Switcher -->
+            <div class="project-card">
+                <div class="card-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h2>Theme Changer</h2>
+                <p>Chuyển đổi giao diện sáng/tối và lưu tùy chọn vào localStorage.</p>
+                <div class="card-meta">
+                    <span class="badge">CSS Variables</span>
+                    <span class="badge">Dark/Light</span>
+                </div>
+                <a href="project-3-theme/index.html" class="card-btn">
+                    Truy cập dự án <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Project 4: Library Manager -->
+            <div class="project-card">
+                <div class="card-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h2>Thư viện sách</h2>
+                <p>Thêm, xóa, đánh dấu đã đọc — quản lý tủ sách cá nhân.</p>
+                <div class="card-meta">
+                    <span class="badge">CRUD</span>
+                    <span class="badge">LocalStorage</span>
+                </div>
+                <a href="project-4-library/index.html" class="card-btn">
+                    Truy cập dự án <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </main>
+
+        <footer class="dashboard-footer">
+            <p>© 2026 - Tổng hợp 4 dự án frontend | <i class="fas fa-code"></i> HTML + CSS + JS tách biệt</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
